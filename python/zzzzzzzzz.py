@@ -2,6 +2,6 @@
 
 
 
-list1 =list(range(20))
-new_list=list1[5:15:3]
-print(new_list)
+list2 =[0,1,2,3,4,5]
+del list2[1:4]
+print(list2)
