@@ -1,8 +1,12 @@
 
-n=input().split()
-a=0
+n=int(input())
 total=0
-for i in n:
-    total+=int(i) * 10 **a
-    a+=1
-print(total)
+Avg=0
+listnum=''
+for i in range(n):
+    m=input()
+    total+=int(m)
+    Avg=total/n
+    listnum+=[m]
+print(listnum)
+print('%.2f'%Avg)
