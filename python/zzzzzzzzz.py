@@ -2,6 +2,10 @@
 
 
 
-list2 =[0,1,2,3,4,5]
-del list2[1:4]
-print(list2)
+a,b=input().split()
+
+a=int(a)
+b=int(b)
+
+result=a/b
+print("%.9f"% result)
