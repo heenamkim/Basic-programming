@@ -2,10 +2,4 @@
 
 
 
-a,b=input().split()
-
-a=int(a)
-b=int(b)
-
-result=a/b
-print("%.9f"% result)
+print('|\_/|\n|q p|   /}\n( 0 )"""\ \n|"^"`    |\n||_/=\\\\__|')

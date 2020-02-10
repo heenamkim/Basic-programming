@@ -2,13 +2,10 @@
 
 int main()
 {
-  int A,B;
+  double A,B;
 
-  scanf("%d %d",&A,&B);
-  printf("%d\n",A+B);
-  printf("%d\n",A-B);
-  printf("%d\n",A*B);
-  printf("%d\n",A/B);
-  printf("%d\n",A%B);
+
+  scanf("%lf %lf",&A,&B);
+  printf("%.9lf",A/B);
   return 0;
 }

@@ -2,6 +2,6 @@
 
 int main()
 {
-printf("\    /\ \n )  ( ')\n(  /  )\n \(__)|");
+printf("\    /\ \n )  ( ')\n(  /  )\n \(__)| ");
   return 0;
 }
