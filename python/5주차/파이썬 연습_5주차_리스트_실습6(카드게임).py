@@ -4,7 +4,6 @@ import random
 card = [1,2,3,4,5,6,7,8,9,10,'J','Q','K']
 Player = ['you','player']
 you = random.sample(card,3)
-card.remove(you)
 player = random.sample(card,3)
 first = random.choice(Player)
 a=0
