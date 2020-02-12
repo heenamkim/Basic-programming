@@ -1,7 +1,6 @@
 #파이썬 연습_6주차_튜플_실습4.py
 
 s_num=int(input())
-
 total=[]
 
 def camltbeAdded(num):
