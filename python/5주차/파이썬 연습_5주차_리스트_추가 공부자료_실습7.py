@@ -2,14 +2,13 @@
 
 num=input().split() #num를 list로 여러게 한번에 받기
 
-list1=[] #list1은 빈 리스트
 Max = int(num[0]) #Max를 num[0]를 정수로 변환한 값이라 할대
 for i in range(4):
     for i in num:
         if Max < int(i):
             Max = int(i)
-    list1.append(Max)
-    print(Max)
-print(list1)
+num.append(Max)
+    
+print(num)
 
     
