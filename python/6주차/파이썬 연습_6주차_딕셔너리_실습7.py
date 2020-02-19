@@ -1,4 +1,4 @@
-#파이썬 연습_6주차_딕셔너리_실습6.py
+#파이썬 연습_6주차_딕셔너리_실습7.py
 
 result={}
 
@@ -14,8 +14,8 @@ while True:
         for i in sub:
             list1.append(int(i))
             result[name]=list1
-            i=list1[i]
-          
+        total+=list1[int(0)]
+    print(total)
 print(result)
 
 

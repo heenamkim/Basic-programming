@@ -14,3 +14,4 @@ int main()
 
   return 0;
 }
+//max 값이랑 second값 지정해 놓고 비교해서 풀기
