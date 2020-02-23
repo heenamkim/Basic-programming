@@ -9,13 +9,14 @@ while True:
     else:    
         sub=input().split()
         list1=[]
-        avg_list=[]
+        python=0
         total=0
         for i in sub:
             list1.append(int(i))
             result[name]=list1
-        total+=list1[int(0)]
-    print(total)
+        python=list1[0]
+        total=sum(python)/3
+print(total)
 print(result)
 
 

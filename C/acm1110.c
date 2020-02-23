@@ -11,7 +11,7 @@ int main()
       a=total%10;
       b=total/10;
       total=a+b;
-    else if(A==total)
+    else (A==total)
     printf("%d",len(total));}
   return 0;
 }
