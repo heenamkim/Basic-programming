@@ -1,23 +1,9 @@
 
 
-s_num=int(input())
-total=()
-
-def camltbeAdded(num):
-    for i in num:
-        if int(i) % s_num == 0 or s_num % int(i) == 0:
-            total+=tuple(int(i))
-    return total
-
-
-while True:
-    print('1.Add\n2.Print\n0.exit')
-    m=int(input())
-    if m == 1:
-        num=input().split()
-        camltbeAdded(num)
-    elif m == 2:
-        print(camltbeAdded(num))
-    else:
-        break
-        print('0')
+import random
+card = [1,2,3,4,5,6,7,8,9,10,'J','Q','k']
+Player = ['You','Player']
+first = random.choice(Player)
+print(first,'First!')
+for i in card:
+    random.sample(card,3)
