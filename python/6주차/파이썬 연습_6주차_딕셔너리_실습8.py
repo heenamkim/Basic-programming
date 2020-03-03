@@ -14,12 +14,13 @@ while True:
         dic[new_id]=new_pw
         print('Joined Complete!')
     else:
-        new_id=input('ID =')
-        for new_id in dic:
+        lo_id=input('ID =')
+        for new_id,new_pw in dic.items():
+            if new_id in dic != lo_id:
                 print("There's no account. Please join us!")
             else:
                 new_pw=input('PW =')
-                if new_id == dic[new_id]:
+                if new_pw in dic == dic[new_id]:
                     print('Loged in Complete!')
                 else:
                     for i in range(5):
@@ -30,5 +31,6 @@ while True:
                             new_pw=input('PW =')
                             dic[new_id]=l_pw
         
+
 
 
