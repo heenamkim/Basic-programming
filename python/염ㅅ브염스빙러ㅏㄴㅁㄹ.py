@@ -8,8 +8,4 @@ for key,value in dic.items():
         pw=input('pw')
     if pw == value:
         print('0')
-        else:
-            print('x')
-    else:
-        print('x')
-
+      
