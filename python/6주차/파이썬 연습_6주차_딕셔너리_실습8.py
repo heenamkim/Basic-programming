@@ -26,7 +26,7 @@ while True:
                             print('Loged in Complete!')
                             break
                         elif count<4: # 만약 count가 4보다 작으면
-                            count+=1 # count는 1씩 증가
+                            count+=1 # count에 1더하기
                             print("Wrong rassword! Try", count,'/5')
                     else: # 만약 count가 5보다 같거나  크면
                         print('Reset password! Input new password')
