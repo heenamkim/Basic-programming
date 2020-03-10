@@ -1,9 +1,9 @@
 
-
-import random
-card = [1,2,3,4,5,6,7,8,9,10,'J','Q','k']
-Player = ['You','Player']
-first = random.choice(Player)
-print(first,'First!')
-for i in card:
-    random.sample(card,3)
+num=input().split()
+x=num[0] # x는 num[0]
+for i in range(len(num)): # i가 num의 길이만큼 있는동안
+    if int(i)>0: # 만약 i가 0보다 크면
+        int(num[i-1])=int(num[i]) # num[int(i-1)]는 num[int(i)]
+num[-1]=x # num[-1]은 x
+print(num)
+    
