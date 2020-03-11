@@ -1,5 +1,7 @@
 
 
-num=[3,5,6,5,3,7,5]
-num.remove(7)
-print(num)
+card = ['J','Q','K']
+or i in range(9):
+    card.append(i+1)
+
+print(card)
