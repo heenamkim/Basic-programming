@@ -1,9 +1,8 @@
 #파이썬 연습_5주차_리스트_실습6(카드게임).py
-#1,2,3,4,5,6,7,8,9,10,'J','Q','K'
+
 import random
-card = ['J','Q','K']
-for i in range(9):
-    card.append(i+1)
+card = [1,2,3,4,5,6,7,8,9,10,'J','Q','K']
+num={1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,'J':11,'Q':12,'K':13}
 random.shuffle(card)
 people=['You','Player']
 you=[]
@@ -20,10 +19,7 @@ if first == 'You':
     for i in range(3):
         you=input('Your turn >>')
         print('Player >>',player[i])
-        J='11'
-        Q='12'
-        K='13'
-        if you > player[i]:
+        if int(you) > int(player[i]):
             a+=1
             print("==score [",a,":",b,"]==")            
         else:
@@ -38,10 +34,7 @@ else:
     for i in range(3):
         print('Player >>',player[i])
         you=input('Your turn >>')
-        J=11
-        Q=12
-        K=13
-        if you < player[i]:
+        if int(you) < int(player[i]):
             a+=1
             print("==score [",a,":",b,"]==")            
         else:
