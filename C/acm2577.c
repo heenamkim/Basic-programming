@@ -12,6 +12,7 @@ for(int i=0;i<3;i++)
   total=a[0]*a[1]*a[2];
   for (int j=0;total<10;j++)
     list[j]=total%10;
+    total=total/10;
     for (int k=0;k<4;k++)
       printf("%d\n",list[k]);
 }

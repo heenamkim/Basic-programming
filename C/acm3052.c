@@ -10,7 +10,8 @@ for (int i=0;i<10;i++){
   rem[i]=list[i]%42;
   }
   for (int i=0; i<sizeof(rem)/sizeof(int);i++)
-    if( i not in rem)
+    if( )
+
       count++;
   printf("%d",count);
 return 0;
