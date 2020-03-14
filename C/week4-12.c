@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-int main()
+void sum()
 {
 int n;
 int total=0;
 scanf("%d",&n);
-while (1){
-  total+=n%10;
-  n=n/10;
-}
+for (int i=0;i<=n;i++)
+  total+=i;
 printf("Total = %d",total);
+}
+int main()
+{
+sum();
 return 0;
 }
