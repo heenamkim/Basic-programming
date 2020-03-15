@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+void getSum()
 {
 int n;
 int total=0;
@@ -10,5 +10,9 @@ while (n != 0){
     n=n/10;
   }
 printf("Total = %d",total);
+}
+int main()
+{
+getSum();
 return 0;
 }
