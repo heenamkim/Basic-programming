@@ -2,17 +2,13 @@
 
 int main()
 {
-int list[10]={0};
-int rem[10]={0};
+int num[10];
+int rem[10];
 int count=0;
-for (int i=0;i<10;i++){
-  scanf("%d\n",&list[i]);
-  rem[i]=list[i]%42;
-  }
-  for (int i=0; i<sizeof(rem)/sizeof(int);i++)
-    if( )
-
-      count++;
-  printf("%d",count);
-return 0;
+for (int i=0;i<10;i++)
+  scanf("%d",&num[i]);
+  for (int j=0;j<10;j++)
+    rem[j]=(num[j]%42);
+for (int k=0;k<10;k++)
+  printf("%d\n",rem[k]);
 }
