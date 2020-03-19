@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 #define DICE_SIMULATION 1
 #define GAME_SHOW       2
@@ -59,7 +61,9 @@ int displayMainMenu()
     printf("___________________\n");
     printf("0.Exit\n");
     printf("===================\n");
+    printf("Game Menu Number>>");
     scanf("%d",&menu);
+    printf("===================\n");
 
     return menu;
 }
@@ -73,8 +77,25 @@ void gameShow() {
 }
 
 void highLowGame() {
-    printf("3.High Low Game\n");
+    int ran,num;
+    srand(time(0));
+    ran = rand() % 100;
+    printf("High Low Game Start!\n");
+    printf("___________________\n");
+        while (1){
+            printf("Num >>");
+            scanf("%d",&num);
+            if (ran > num)
+                printf("High!\n");
+            else if (ran < num)
+                printf("Low..\n");
+            else if (ran == num){
+                printf("That's Right!\n");
+                break;
+            }
+        }
 }
+
 
 void wordGame() {
     printf("4.Word Game\n");

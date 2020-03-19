@@ -2,6 +2,7 @@
 
 import random
 card = [1,2,3,4,5,6,7,8,9,10,'J','Q','K']
+dic_card = {'J':11,'Q':12,'K':13}
 random.shuffle(card)
 people=['You','Player']
 you=[]
@@ -17,13 +18,37 @@ if first == 'You':
     print('Player card is',player)
     for i in range(3):
         you=input('Your turn >>')
-        pla=print('Player >>',player[i])
-        if int(you) > int(pla):
-            a+=1
-            print("==score [",a,":",b,"]==")            
+        p=random.choice(player)
+        player.remove(p)
+        print('Player >>',p)
+        if you in dic_card or p in dic_card:
+            if you > p:
+                a+=1
+                print("==score [",a,":",b,"]==")
+                if a==2:
+                    print("You Win!")
+                    break
+            else:
+                b+=1
+                print("==score [",a,":",b,"]==")
+                if b==2:
+                    print("You Lose~")
+                    break
         else:
-            b+=1
-            print("==score [",a,":",b,"]==")
+            if int(you) > p:
+                a+=1
+                print("==score [",a,":",b,"]==")
+                if a==2:
+                    print("You Win!")
+                    break
+            else:
+                b+=1
+                print("==score [",a,":",b,"]==")
+                if b==2:
+                    print("You Lose~")
+                    break
+
+            
 else:
     print('Player First!')
     player=card[:3]
@@ -31,12 +56,33 @@ else:
     print('Player card is',player)
     print('You card is',you)
     for i in range(3):
-        pla=print('Player >>',player[i])
+        p=random.choice(player)
+        player.remove(p)
+        print('Player >>',p)
         you=input('Your turn >>')
-        if int(you) < int(pla):
-            a+=1
-            print("==score [",a,":",b,"]==")            
+        if you in dic_card or p in dic_card:
+            if you < p:
+                a+=1
+                print("==score [",a,":",b,"]==")
+                if a==2:
+                    print("You Lose~")
+                    break
+            else:
+                b+=1
+                print("==score [",a,":",b,"]==")
+                if b==2:
+                    print("You Win!")
+                    break
         else:
-            b+=1
-            print("==score [",a,":",b,"]==")
-
+            if int(you) < p:
+                a+=1
+                print("==score [",a,":",b,"]==")
+                if a==2:
+                    print("You Lose~")
+                    break
+            else:
+                b+=1
+                print("==score [",a,":",b,"]==")
+                if b==2:
+                    print("You Win!")
+                    break 
