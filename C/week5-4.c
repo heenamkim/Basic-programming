@@ -3,10 +3,11 @@
 int main()
 {
     int i;
-    int total=0, num[10]={0};
-    while (num != 0){
+    int num[10]={0};
+    double total=0;
+    for ( i=0;i<10;i++){
         scanf("%d", &num[i]);
-        i++;
+        total += num[i];
         if (num[i] == 0)
             break;
     }
