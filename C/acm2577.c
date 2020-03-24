@@ -2,16 +2,22 @@
 
 int main()
 {
-int A,B,C;
-char n[10000000];
-int total=0;
-scanf("%d",&A);
-scanf("%d",&B);
-scanf("%d",&C);
-n[10000000]=A*B*C;
-for (int i = 0; n[i] != '\0'; i++)
-  total=n[i] - '0';
-printf("%d", total);
+    int a,b,c;
+    int n;
+    int num[10]={0};
+    int total=0;
+    scanf("%d %d %d", &a, &b, &c);
+    total = a*b*c;
 
+    while(total != 0)
+    {
+        total /= 10;
+        n = total % 10;
+        num[n] += 1;
+    }
+
+    for (int j = 0; j < 10; j++){
+        printf("%d\n", num[j]);
+    }
 
 }
