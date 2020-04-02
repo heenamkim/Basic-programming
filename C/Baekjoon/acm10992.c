@@ -9,15 +9,15 @@ int main()
         for (int j = i; j <= N-1; j++){
             printf(" ");
         }
-        for (int z = 2; z <= 3; z++){
-            printf("*");
-        }
-        for (int k = 3; k <= i*2-1; k++){
-            if (k == 1|| k == i*2-1)
+        for (int k = 1; k <= i*2-1; k++){
+            if ((k == 1 && i != N) || (k == i*2-1 && i != N))
                 printf("*");
-            else
-                printf("0");
+            else if ( i != N)
+                printf(" ");
         }
+        if ( i == N)
+            for (int z = 1; z <= i*2-1; z++)
+                printf("*");
         printf("\n");
     }
 }
