@@ -4,18 +4,28 @@
 
 int main()
 {
-    int you[3]={0}, player[3];
-    int y,p;
-    int deck[10]={0};
-    //int Player[10]={'You','Player'};
-    srand(time(0));
+    int you[3]={0}, player[3]={0};
+    int y,p,r=0;
+    srand(time(NULL));
 
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 3; j++)
-            you[j]= rand() % 10;
-            deck[j]=
+    for (int i = 0; i < 6; i++){
+        again:;
+        r = rand() % 13+1;
+        if ( i < 3)
+            if (r == you[i]){
+                goto again;
+                you[i] = r;
+            }
+        else
+            if (r == you[i] && r == player[i]){
+                goto again;
+                player[i] = r;
+            }
     }
-    for (int k = 0; k < 3; k++)
-        printf("%d\n",you[k]);
 
+    for (int k = 0; k < 3; k++){
+        printf("%d\n",you[k]);
+        printf("%d\n",player[k]);
+    }
+    return 0;
 }
