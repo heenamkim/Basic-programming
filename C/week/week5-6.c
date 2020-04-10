@@ -5,27 +5,27 @@
 int main()
 {
     int you[3]={0}, player[3]={0};
-    int y,p,r=0;
+    int card[13]={0};
+    int y,p,r;
     srand(time(NULL));
 
     for (int i = 0; i < 6; i++){
-        again:;
         r = rand() % 13+1;
-        if ( i < 3)
-            if (r == you[i]){
-                goto again;
+        if (r != card[r]){
+            if (i < 3){
                 you[i] = r;
+                card[r] = r;
             }
-        else
-            if (r == you[i] && r == player[i]){
-                goto again;
-                player[i] = r;
+            else if (i >= 3){
+                player[i-3] = r;
+                card[r] = r;
             }
+        }
     }
 
     for (int k = 0; k < 3; k++){
-        printf("%d\n",you[k]);
-        printf("%d\n",player[k]);
+        printf("%d ",you[k]);
+        printf("%d ",player[k]);
     }
-    return 0;
+
 }
