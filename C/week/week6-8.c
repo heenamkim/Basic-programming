@@ -11,15 +11,14 @@ struct Account
 int main()
 {
     struct Account idpw[50];
-    idpw[0].new_id = "admin";
-    idpw[0].new_pw = "root";
-
 
     int num = 0;
     int i = 1, login = 0;
     int id_pw = 0;
     char log_id[10];
     char log_pw[10];
+    strcpy (idpw[0].new_id, "admin");
+    strcpy (idpw[0].new_pw, "root");
 
     printf("%s : %s\n", idpw[0].new_id, idpw[0].new_pw);
     while(1){
