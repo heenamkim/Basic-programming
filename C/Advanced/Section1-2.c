@@ -19,7 +19,7 @@ int main()
     fflush(stdin); // 출력버퍼를 지워주는 함수
 
 
-    printf("%s",name);
+    puts(name);
 
 
 }
