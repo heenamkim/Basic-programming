@@ -7,7 +7,8 @@ int player2=0;
 for(int i=0;i<5;i++){
   printf("Round %d\n",i+1);
   printf("Turn >>Player1\n");
-  for (int j=0;j<3;j++){
+
+  for (int j=0;j<3;j++) {
     int a;
     char b;
     scanf("%d %c",&a,&b);
