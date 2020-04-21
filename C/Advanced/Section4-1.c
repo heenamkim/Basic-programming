@@ -28,5 +28,16 @@ int main()
 int main()
 { // 문제2 4-1
 
-    
+    int n;
+
+    scanf("%d", &n);
+    for (int a = 0; a <= 100; a++){
+        for (int b = 0; b <= 100; b++){
+            for (int c = 0; c <= 100; c++){
+                if (a * b - c == n)
+                    printf("%d * %d - %d = %d\n", a, b, c, n);
+            }
+        }
+    }
+
 }
