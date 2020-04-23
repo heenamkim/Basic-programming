@@ -13,7 +13,7 @@ int main()
         scanf("%c", &alp);
         if (alp == '#')
             break;
-        scanf("%[^\n]s", sentence); //수정
+        gets(sentence); 
         len = strlen(sentence);
         for (int i = 0; i < len; i++){
             if (alp == sentence[i] || alp == sentence[i]+32)
