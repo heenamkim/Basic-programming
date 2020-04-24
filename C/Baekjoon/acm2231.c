@@ -1,33 +1,39 @@
 #include <stdio.h>
+#include <math.h>
+
 
 int main()
 {
-    int N, i = 0, min = 0, max = 0;
-    int num[10] = {0};
+    int N;
+    int count = 0, , num = 0, num2 = 0;
+    int rem = 0, total = 0, min = 0, n = 0, n2 = 0;
     scanf("%d", &N);
 
 
-    for (int a = 0; a < 10; a++){
-        for (int b = 0; b < 10; b++){
-            for (int c = 0; c < 10; c++){
-                if ((a*100)+(b*10)+c+a+b+c == N){
-                    num[i] = (a*100)+(b*10)+c;
-                    i++;
-                }
-            }
-        }
-    }
-    if (i == 0){
-        printf("0");
-    }
-    else {
-        min = num[0];
-        for (int j = 0; j < 10; j++){
-            if (num[j] != 0)
-                if (min > num[j])
-                    min = num[j];
-        }
-        printf("%d", min);
-    }
+    for (int j = 0; j < N; j++){
 
+        num = j;
+        num2 = j;
+
+        count = 0;
+        while(num2 > 0){
+            num2 /= 10;
+            count++;
+        }
+        total = 0;
+        n = 0;
+        for (int i = 0; i < count; i++){
+            total += num % 10;
+            rem = num % 10;
+            total += rem * round(pow(10.0, i));
+            n += rem * round(pow(10.0, i));
+            num /= 10;
+        }
+        if (total == N){
+            n2 = n;
+            if (n2 < n)
+                n2 = n;
+        }
+        printf("%d\n", n2);
+    }
 }
