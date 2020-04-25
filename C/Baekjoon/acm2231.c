@@ -5,8 +5,9 @@
 int main()
 {
     int N;
-    int count = 0, , num = 0, num2 = 0;
-    int rem = 0, total = 0, min = 0, n = 0, n2 = 0;
+    int count = 0, num = 0, num2 = 0;
+    int rem = 0, total = 0, n = 0;
+    int a = 0;
     scanf("%d", &N);
 
 
@@ -30,10 +31,11 @@ int main()
             num /= 10;
         }
         if (total == N){
-            n2 = n;
-            if (n2 < n)
-                n2 = n;
+            a = 1;
+            printf("%d\n", n);
+            break;
         }
-        printf("%d\n", n2);
     }
+    if (a == 0)
+        printf("0");
 }
