@@ -4,16 +4,28 @@ int main()
 {
     int N;
     int count = 1;
-    while(N != count){
+    int a = 0, b = 0;
 
-        N -= count;
-        count++;
-        if (N < count){
-            count += 1;
+    scanf("%d", &N);
+
+    while(1) {
+
+        if (N <= 0){
+            N += count-1;
             break;
         }
+        N -= count;
+        count++;
+    }
 
+    if (count % 2 == 0){
+        a = count - N;
+        b = N;
+    }
+    else{
+        a = N;
+        b = count - N;
 
     }
-    printf("%d", count);
+    printf("%d/%d", a, b);
 }
