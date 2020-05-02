@@ -10,15 +10,12 @@ int main()
     len = strlen(word);
 
     for (int i = 0; i < len; i++){
-
-        if (word[i] == 32){
-            word[i] = word[i];
-        }
-        else if (word[i] >= 'Z'){
-            word[i] -= 32;
-        }
-        else if (word[i] <= 'z'){
+    
+        if (word[i] >= 'A' && word[i] <= 'Z'){
             word[i] += 32;
+        }
+        else if (word[i] >= 'a' && word[i] <= 'z'){
+            word[i] -= 32;
         }
     }
 

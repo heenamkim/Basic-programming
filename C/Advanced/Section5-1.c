@@ -6,24 +6,15 @@ int main()
     int count = 0;
 
     while(scanf("%c", &N) != EOF){
-        for (int i = 'A'; i < 'Z'; i++){
-            if (i == N){
-                printf("Upper case\n");
-            }
-        }
-        for (int i = 'a'; i < 'z'; i++){
-            if (i == N){
-                printf("Lower case\n");
-            }
-        }
-        for (int i = '0'; i < '9'; i++){
-            if (i == N){
-                printf("Arabic number\n");
-            }
-        }
-
+        if (N >= 'A' && N <= 'Z')
+            printf("Upper case\n");
+        else if (N >= 'a' && N <= 'z')
+            printf("Lower case\n");
+        else if (N >= '0' && N <= '9')
+            printf("Arabic number\n");
+        else
             printf("Special Character\n");
-
+        fflush(stdin);
     }
     printf("END");
 }
