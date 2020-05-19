@@ -19,7 +19,7 @@ int main()
         }
     }
     for (int i = 0; i <= 14; i++){
-        printf("%d", apt[0][i]);
+        printf("%d", hapt[0][i]);
     }
     // for (int i = 0; i < t; i++){
     //     scanf("%d", &a);
