@@ -2,28 +2,26 @@
 
 int main()
 {
-    int t;
-    int apt[15][14] = {};
-    int a, b;
+    int t, f, n, apt[15][14];
+    int people = 0;
 
     scanf("%d", &t);
-
-    for (int i = 0; i <=14; i++){
-        for (int j = 1; j <= 14; j++){
-            if (i == 0){
-                apt[i][j] = apt[i][j];
+    for (int i = 0; i < t; i++) {
+        scanf("%d %d", &f, &n);
+        for (int j = 0; j <= f; j++) {
+            for (int k = 1; k <= n; k++) {
+                people = 0;
+                if (j == 0) {
+                    apt[j][k] = k;
+                }
+                else {
+                    for (int l = 1; l <= k; l++) {
+                        people += apt[j-1][l];
+                    }
+                    apt[j][k] = people;
+                }
             }
-            // else{
-            // apt[i][j] += apt[i-1][j];
-            // }
         }
+        printf("%d\n", apt[f][n]);
     }
-    for (int i = 0; i <= 14; i++){
-        printf("%d", hapt[0][i]);
-    }
-    // for (int i = 0; i < t; i++){
-    //     scanf("%d", &a);
-    //     scanf("%d", &b);
-    //     printf("%d\n", apt[a][b]);
-    // }
 }
