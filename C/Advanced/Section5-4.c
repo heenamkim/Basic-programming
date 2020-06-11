@@ -9,36 +9,28 @@ int main()
     char d[20] = {0};
     char word[80] = {0};
 
-    scanf("%s", a);
-    scanf("%s", b);
-    // scanf("%s", c);
-    // scanf("%s", d);
+    char *alpArr[4] = {a, b, c, d};
+    char *alp;
 
-    for (int i = 0; i < 20; i++){
-        if(strncmp(a, b, i) != 0){
-            if (a[i] < b[i]){
-                strcat(word, b);
-                if (a[i] < c[i])
-                    strcat(word, c);
-                
-                    if (a[i] < d[i]){
-                        strcat(word, a);
-                        strcat(word, d);
-                        break;
-                    }
-                    else{
-                        strcat(word, b);
-                else
-                    strcat(word, c);
-            }
+    for (int i = 0; i < 4; i++) {
+        scanf("%s", alpArr[i]);
+    }
 
-            else{
-                strcat(word, b);
-                strcat(word, a);
-                printf("%s", word);
-                break;
+    for (int i = 0; i < 4-1; i++) {
+        for (int j = 0; j < (4-i)-1; j++) {
+            if (strcmp (alpArr[j], alpArr[j+1]) > 0) {
+                alp = alpArr[j];
+                alpArr[j] = alpArr[j+1];
+                alpArr[j+1] = alp;
             }
         }
     }
+    for (int i = 0; i < 4; i++) {
+        strcat (word, alpArr[i]);
+        word[strlen(word)] = ' ';
+    }
+
+    printf("%s", word);
+
 
 }
