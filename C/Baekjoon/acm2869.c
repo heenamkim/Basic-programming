@@ -1,15 +1,14 @@
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
-    double a, b, v;
-    double total;
+    int a, b, v;
+    int number;
 
 
-    scanf("%lf %lf %lf", &a, &b, &v);
+    scanf("%d %d %d", &a, &b, &v);
 
-    total = (v/(a-b));
+    number = (v - b - 1) / (a - b) + 1;
 
-    printf("%lf", total);
+    printf("%d", number);
 }
